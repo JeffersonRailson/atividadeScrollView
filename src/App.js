@@ -8,8 +8,11 @@ export default class App extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Post/>
-
+        <Post texto="teste"/>
+        <Post texto="teste"/>
+        <Post texto="teste"/>
+        <Post texto="teste"/>
+        <Post texto="teste"/>
       </ScrollView>
     );
   }
