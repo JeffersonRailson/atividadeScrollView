@@ -5,12 +5,15 @@ export default class Post extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.h1}>Aprendendo React</Text>
-        <Text style={styles.textAutor}>Jefferson Railson </Text>
+        <View style={styles.containerHead}>
+          <Text style={styles.h1}>{this.props.descricao}</Text>
+          <Text style={styles.textAutor}>{this.props.autor}</Text>
+          <Text style={{ textAlign: 'center', fontWeight: 'bold' }}>_____________________________________________</Text>
+        </View>
         <View>
-        <Text style={styles.text}>
-          {this.props.texto}
-        </Text>
+          <Text style={styles.text}>
+            {this.props.texto}
+          </Text>
         </View>
       </View>
     );
@@ -18,36 +21,36 @@ export default class Post extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      margin: 15,
-      
-    },
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        margin: 15,
-        
-      },
-    h1: {
-        fontSize: 20,
-        margin: 20,
-        fontWeight: 'bold',
-        color: 'orange'
-    },
-    text:{
-        fontSize: 20,
-        margin: 20,
-        textAlign: 'center'
-    
-    },
-    textAutor:{
-        fontSize: 20,
-        margin: 10,
-        textDecorationLine: 'underline'
-        
-    
-    }
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    marginTop: 100,
+    marginBottom: 100,
+    marginRight: 20,
+    marginLeft: 20,
+  },
+
+  containerHead: {
+    margin: 15
+  },
+
+  h1: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'black'
+  },
+
+  text: {
+    fontSize: 15,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    color: 'black',
+    marginBottom: 30,
+    margin: 25
+
+  },
+  textAutor: {
+    fontSize: 16,
+  }
 
 });
